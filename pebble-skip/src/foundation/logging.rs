@@ -29,13 +29,13 @@ macro_rules! log {
 					file!(),
 					"\0"
 				))
-				},
+			},
 			line!() as i32,
 			unsafe {
 				$crate::standard_c::CStr::from_static_zero_terminated_unchecked(concat!(
 					$message, "\0"
 				))
-				},
-			)
+			},
+		)
 	};
 }

@@ -13,7 +13,7 @@
 [![open pull requests](https://img.shields.io/github/issues-pr-raw/Tamschi/pebble-sys)](https://github.com/Tamschi/pebble-sys/pulls)
 [![crev reviews](https://web.crev.dev/rust-reviews/badge/crev_count/pebble-sys.svg)](https://web.crev.dev/rust-reviews/crate/pebble-sys/)
 
-Low-level FFI bindings for Pebble (watch) SDK 4.3.
+Low-level FFI bindings for Pebble watches, based on the official docs under Apache-2.0.
 
 I recommend using the high-level wrapper in [`pebble-skip`] instead, since it provides almost the same functionality with full memory safety and with very little overhead.
 

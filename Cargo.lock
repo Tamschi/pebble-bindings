@@ -13,19 +13,19 @@ name = "pebble-skip"
 version = "0.0.1"
 dependencies = [
  "debugless-unwrap",
- "pebble-sys 0.0.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "pebble-sys 0.0.1",
  "unsafe_unwrap",
 ]
 
 [[package]]
 name = "pebble-sys"
 version = "0.0.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "10872793e714e534c67172835a16c1db27ef84eef58805e5f0fea0fd16e426c9"
 
 [[package]]
 name = "pebble-sys"
-version = "0.0.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "10872793e714e534c67172835a16c1db27ef84eef58805e5f0fea0fd16e426c9"
+version = "0.1.0-dev+4.9.169"
 
 [[package]]
 name = "unsafe_unwrap"

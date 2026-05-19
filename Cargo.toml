@@ -1,2 +1,3 @@
 [workspace]
 members = ["pebble-sys", "pebble-skip"]
+resolver = "3"

@@ -10,4 +10,17 @@
 		"todo!"
 	],
 	"todo-tree.regex.regex": "(($TAGS)|^\\s*- \\[ \\])",
+	"cSpell.words": [
+		"appinfo",
+		"argb",
+		"Icterine",
+		"Jazzberry",
+		"memmove",
+		"Moddable",
+		"Purpureus",
+		"Screamin",
+		"smartstrap",
+		"watchapp",
+		"watchface"
+	],
 }
