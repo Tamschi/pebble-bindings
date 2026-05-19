@@ -1,0 +1,2 @@
+[workspace]
+members = ["pebble-sys", "pebble-skip"]
