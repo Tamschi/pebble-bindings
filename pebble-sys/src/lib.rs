@@ -1,6 +1,13 @@
-//! Documentation for this crate is work in progress.
+//! Slightly Rust-y Pebble watch platform C API bindings.
 //!
-//! For now, please see the C API documentation at <https://developer.rebble.io/developer.pebble.com/docs/c/index.html> for more information.
+//! The documentation for this crate is based (relatively verbatim) on <https://developer.repebble.com/docs/c/>.
+//!
+//! >  To learn more about how to use this SDK, take a look at the [Writing Apps for Pebble](https://developer.repebble.com/guides/pebble-apps/) section of the Developer Guides.
+//! >
+//! > You can also view the [C SDK Tutorial](https://developer.repebble.com/getting-started/watchface-tutorial/part1/).
+//! > This will guide you through the first stages to creating a Pebble watchface, adding customized images and fonts and extra web-based content.
+//!
+//! TODO: Document Rust project setup through deployment.
 
 #![no_std]
 #![warn(clippy::pedantic)]

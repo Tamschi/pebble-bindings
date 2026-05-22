@@ -45,7 +45,7 @@ unsafe extern "C" {
 	/// - `clips`: `true`
 	/// - `hidden`: `false`
 	/// - `update_proc`: `None` (draws nothing)
-	pub fn layer_create(frame: GRect) -> Option<HLayer>;
+	pub safe fn layer_create(frame: GRect) -> Result<HLayer, ()>;
 
 	/// Creates a layer on the heap with extra space for callback data, and sets its frame and bounds.
 	/// Default values:
@@ -62,7 +62,7 @@ unsafe extern "C" {
 	/// # See also
 	///
 	/// [`layer_create()`], [`layer_set_frame()`], [`layer_set_bounds()`]
-	pub fn layer_create_with_data(frame: GRect, data_size: usize) -> Option<HLayer>;
+	pub safe fn layer_create_with_data(frame: GRect, data_size: usize) -> Result<HLayer, ()>;
 
 	/// Destroys a layer previously created by [`layer_create()`] or [`layer_create_with_data()`].
 	pub fn layer_destroy(layer: HLayer);

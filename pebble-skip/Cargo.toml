@@ -1,8 +1,8 @@
 [package]
 name = "pebble-skip"
-version = "0.0.1"
+version = "0.1.0-dev+4.9.169"
 authors = ["Tamme Schichler <tamme@schichler.dev>"]
-edition = "2018"
+edition = "2024"
 description = "High-level API wrapper for Pebble (watch) SDK 4.3"
 license = "MIT OR Apache-2.0"
 keywords = ["Pebble", "watch", "embedded", "RAII", "wrapper"]
@@ -13,7 +13,7 @@ documentation = "https://docs.rs/pebble-skip/0.0.1"
 readme = "README.md"
 include = [
 	"**/*.rs",
-	"!tests/unincluded_*.rs", # Tests of meta data files not included in the package.
+	"!tests/unincluded_*.rs",    # Tests of meta data files not included in the package.
 	"Cargo.toml",
 	"CHANGELOG.md",
 	"CODE_OF_CONDUCT.md",
@@ -40,6 +40,6 @@ doctest = false
 bench = false
 
 [dependencies]
-debugless-unwrap = "0.0.4"
-pebble-sys = "0.0.1"
+debugless-unwrap = "1.0.0"
+pebble-sys = { path = "../pebble-sys" }
 unsafe_unwrap = "0.1.0"

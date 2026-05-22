@@ -22,7 +22,7 @@ unsafe extern "C" {
 	/// - `angle`: The angle for which to compute the sine.
 	///   The angle value is scaled linearly, such that a value of 0x10000 corresponds to 360 degrees or 2 PI radians.
 	///
-	pub fn sin_lookup(angle: i32) -> i32;
+	pub safe fn sin_lookup(angle: i32) -> i32;
 
 	/// Look-up the cosine of the given angle from a pre-computed table.
 	///
@@ -32,10 +32,10 @@ unsafe extern "C" {
 	///
 	/// - `angle`: The angle for which to compute the cosine.
 	///   The angle value is scaled linearly, such that a value of 0x10000 corresponds to 360 degrees or 2 PI radians.
-	pub fn cos_lookup(angle: i32) -> i32;
+	pub safe fn cos_lookup(angle: i32) -> i32;
 
 	/// Look-up the arctangent of a given x, y pair The angle value is scaled linearly, such that a value of 0x10000 corresponds to 360 degrees or 2 PI radians.
-	pub fn atan2_lookup(y: i16, x: i16) -> i32;
+	pub safe fn atan2_lookup(y: i16, x: i16) -> i32;
 }
 
 /// The largest value that can result from a call to [`sin_lookup`] or [`cos_lookup`].

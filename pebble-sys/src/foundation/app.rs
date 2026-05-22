@@ -26,5 +26,5 @@ unsafe extern "C" {
 	/// The event loop for C apps, to be used in app's main().
 	///
 	/// Will block until the app is ready to exit.
-	pub fn app_event_loop();
+	pub safe fn app_event_loop();
 }

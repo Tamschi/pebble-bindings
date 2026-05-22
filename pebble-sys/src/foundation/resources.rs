@@ -18,6 +18,10 @@ use core::ffi::c_void;
 /// # See also
 ///
 /// - [`resource_get_handle()`]
+///
+/// #TODO
+///
+/// Can this use [`NonNull`]?
 pub struct ResHandle(pub *const c_void);
 
 unsafe extern "C" {

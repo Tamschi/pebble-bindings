@@ -9,7 +9,7 @@ use crate::graphics::graphics_types::GColor;
 unsafe extern "C" {
 	/// Trigger the backlight and schedule a timer to automatically disable the backlight after a short delay.
 	/// This is the preferred method of interacting with the backlight.
-	pub fn light_enable_interaction();
+	pub safe fn light_enable_interaction();
 
 	/// Turn the watch's backlight on or put it back into automatic control.
 	///
@@ -19,7 +19,7 @@ unsafe extern "C" {
 	/// # Parameters
 	///
 	/// - `enable`: Turn the backlight on if `true`, otherwise `false` to put it back into automatic control.
-	pub fn light_enable(enable: bool);
+	pub safe fn light_enable(enable: bool);
 
 	/// # Returns
 	///
@@ -27,7 +27,7 @@ unsafe extern "C" {
 	/// Returns false only when the backlight is fully off.
 	///
 	/// Useful for apps that want to behave differently depending on whether the screen is currently lit — e.g. skipping an animation or queuing a visual cue for when the screen wakes.
-	pub fn light_is_on() -> bool;
+	pub safe fn light_is_on() -> bool;
 
 	/// Tint the backlight LED to the given color.
 	///
@@ -52,5 +52,5 @@ unsafe extern "C" {
 	/// Restore the backlight to the user's default color. Rarely needed — the system resets automatically on app exit.
 	///
 	/// No-op on platforms without a color backlight.
-	pub fn light_set_system_color();
+	pub safe fn light_set_system_color();
 }

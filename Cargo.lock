@@ -4,24 +4,18 @@ version = 4
 
 [[package]]
 name = "debugless-unwrap"
-version = "0.0.4"
+version = "1.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f400d0750c0c069e8493f2256cb4da6f604b6d2eeb69a0ca8863acde352f8400"
+checksum = "b93fdcfc175d53094fca1d23d171685621bb67f1658413514f2053d575b3b38c"
 
 [[package]]
 name = "pebble-skip"
-version = "0.0.1"
+version = "0.1.0-dev+4.9.169"
 dependencies = [
  "debugless-unwrap",
- "pebble-sys 0.0.1",
+ "pebble-sys",
  "unsafe_unwrap",
 ]
-
-[[package]]
-name = "pebble-sys"
-version = "0.0.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "10872793e714e534c67172835a16c1db27ef84eef58805e5f0fea0fd16e426c9"
 
 [[package]]
 name = "pebble-sys"

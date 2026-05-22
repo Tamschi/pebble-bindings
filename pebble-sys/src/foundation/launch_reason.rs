@@ -7,7 +7,7 @@ use core::ffi::c_int;
 
 unsafe extern "C" {
 	/// Provides the method used to launch the current application.
-	pub fn launch_reason() -> AppLaunchReason;
+	pub safe fn launch_reason() -> AppLaunchReason;
 
 	/// Get the argument passed to the app when it was launched.
 	///
@@ -18,7 +18,7 @@ unsafe extern "C" {
 	/// # Returns
 	///
 	/// The argument passed to the app, or 0 if the app wasn't launched from a Launch App action.
-	pub fn launch_get_args() -> u32;
+	pub safe fn launch_get_args() -> u32;
 }
 
 /// AppLaunchReason is used to inform the application about how it was launched.

@@ -36,8 +36,8 @@ unsafe extern "C" {
 	///
 	/// # Returns
 	///
-	/// [`Some`] pointer to the window. [`None`] if the window could not be created
-	pub fn window_create() -> Option<HWindow>;
+	/// [`Ok`] with pointer to the window. [`Err`] if the window could not be created
+	pub safe fn window_create() -> Result<HWindow, ()>;
 
 	/// Destroys a Window previously created by window_create.
 	pub fn window_destroy(window: HWindow);

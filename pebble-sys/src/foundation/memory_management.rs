@@ -4,10 +4,10 @@ use core::ffi::c_void;
 
 unsafe extern "C" {
 	/// Calculates the number of bytes of heap memory *not* currently being used by the application.
-	pub fn heap_bytes_free() -> usize;
+	pub safe fn heap_bytes_free() -> usize;
 
 	/// Calculates the number of bytes of heap memory currently being used by the application.
-	pub fn heap_bytes_used() -> usize;
+	pub safe fn heap_bytes_used() -> usize;
 
 	/// Flushes the data cache and invalidates the instruction cache for the given region of memory, if necessary.
 	///

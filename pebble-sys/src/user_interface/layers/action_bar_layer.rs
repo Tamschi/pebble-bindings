@@ -71,7 +71,7 @@
 
 use core::{ffi::c_void, ops::Deref, ptr::NonNull};
 
-use crate::user_interface::layers::{HLayer, action_bar_layer};
+use crate::user_interface::layers::HLayer;
 
 unsafe extern "C" {
 	/// Creates a new ActionBarLayer on the heap and initalizes it with the default values.
@@ -80,10 +80,10 @@ unsafe extern "C" {
 	/// - No click configuration provider ([`None`])
 	/// - No icons
 	/// - Not added to / associated with any window, thus not catching any button input yet.
-	pub fn action_bar_layer_create() -> Option<HActionBarLayer>;
+	pub safe fn action_bar_layer_create() -> Result<HActionBarLayer, ()>;
 
 	/// Destroys a ActionBarLayer previously created by [`action_bar_layer_create`].
-	pub fn action_bar_layer_destroy(action_bar_layer: HActionBarLayer) -> Option<HActionBarLayer>;
+	pub fn action_bar_layer_destroy(action_bar_layer: HActionBarLayer);
 
 	/// Gets the "root" Layer of the action bar layer,
 	/// which is the parent for the sub- layers used for its implementation.
@@ -105,6 +105,8 @@ unsafe extern "C" {
 		action_bar: HActionBarLayer,
 		context: Option<NonNull<c_void>>,
 	);
+
+	//TODO
 }
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash)]

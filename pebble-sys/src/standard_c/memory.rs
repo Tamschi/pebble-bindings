@@ -1,8 +1,8 @@
-use core::ffi::{c_int, c_void};
+use core::{ffi::{c_int, c_void}, ptr::NonNull};
 
 unsafe extern "C" {
-	pub fn malloc(size: usize) -> *mut c_void;
-	pub fn calloc(count: usize, size: usize) -> *mut c_void;
+	pub safe fn malloc(size: usize) -> Result<NonNull<c_void>, ()>;
+	pub safe fn calloc(count: usize, size: usize) -> Result<NonNull<c_void>, ()>;
 	pub fn realloc(ptr: *mut c_void, size: usize) -> *mut c_void;
 	pub fn free(ptr: *mut c_void);
 	pub fn memcmp(ptr1: *const c_void, ptr2: *const c_void, n: usize) -> c_int;

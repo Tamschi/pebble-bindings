@@ -6,6 +6,10 @@ unsafe extern "C" {
 	/// # Parameters
 	///
 	/// - `creation`: Configuration record, or NULL for default settings.
+	///
+	/// #TODO
+	///
+	/// Can the parameter be a transient reference?
 	pub fn moddable_createMachine(creation: *const ModdableCreationRecord);
 }
 

@@ -22,7 +22,7 @@ unsafe extern "C" {
 		label: *const c_char,
 		callbacks: NumberWindowCallbacks,
 		callback_context: *mut c_void,
-	) -> Option<HNumberWindow>;
+	) -> Result<HNumberWindow, ()>;
 
 	/// Destroys a NumberWindow previously created by number_window_create.
 	pub fn number_window_destroy(number_window: HNumberWindow);
