@@ -37,6 +37,7 @@ use crate::{
 use core::{ffi::c_void, ptr::NonNull};
 
 pub mod action_bar_layer;
+pub mod text_layer;
 
 unsafe extern "C" {
 	/// Creates a layer on the heap and sets its frame and bounds. Default values:
